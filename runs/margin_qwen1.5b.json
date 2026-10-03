@@ -1,0 +1,27 @@
+{
+  "injection": {
+    "median_margin": 0.49701896727014516,
+    "n_blocked": 149,
+    "n_flipped": 0
+  },
+  "jailbreak": {
+    "median_margin": 0.4940889311437562,
+    "n_blocked": 117,
+    "n_flipped": 1
+  },
+  "toxic": {
+    "median_margin": 0.4937100978631075,
+    "n_blocked": 145,
+    "n_flipped": 0
+  },
+  "unauth_irrev": {
+    "median_margin": 0.4902915235185259,
+    "n_blocked": 150,
+    "n_flipped": 0
+  },
+  "exfil_secret": {
+    "median_margin": 0.12245933120185457,
+    "n_blocked": 77,
+    "n_flipped": 54
+  }
+}

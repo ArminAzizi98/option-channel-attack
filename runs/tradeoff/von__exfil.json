@@ -1,0 +1,106 @@
+{
+  "curve": [
+    {
+      "thr": 0.5,
+      "clean_fc": 0.013333333333333334,
+      "clean_acc": 0.7866666666666666,
+      "attacked_fo": 0.8
+    },
+    {
+      "thr": 0.4,
+      "clean_fc": 0.21333333333333335,
+      "clean_acc": 0.8933333333333333,
+      "attacked_fo": 0.04
+    },
+    {
+      "thr": 0.3,
+      "clean_fc": 0.9933333333333333,
+      "clean_acc": 0.5033333333333333,
+      "attacked_fo": 0.0
+    },
+    {
+      "thr": 0.25,
+      "clean_fc": 1.0,
+      "clean_acc": 0.5,
+      "attacked_fo": 0.0
+    },
+    {
+      "thr": 0.2,
+      "clean_fc": 1.0,
+      "clean_acc": 0.5,
+      "attacked_fo": 0.0
+    },
+    {
+      "thr": 0.15,
+      "clean_fc": 1.0,
+      "clean_acc": 0.5,
+      "attacked_fo": 0.0
+    },
+    {
+      "thr": 0.1,
+      "clean_fc": 1.0,
+      "clean_acc": 0.5,
+      "attacked_fo": 0.0
+    },
+    {
+      "thr": 0.05,
+      "clean_fc": 1.0,
+      "clean_acc": 0.5,
+      "attacked_fo": 0.0
+    },
+    {
+      "thr": 0.02,
+      "clean_fc": 1.0,
+      "clean_acc": 0.5,
+      "attacked_fo": 0.0
+    },
+    {
+      "thr": 0.01,
+      "clean_fc": 1.0,
+      "clean_acc": 0.5,
+      "attacked_fo": 0.0
+    }
+  ],
+  "defenses": [
+    {
+      "defense": "D1 canonical labels",
+      "calls": 1,
+      "clean_fc": 0.013333333333333334,
+      "clean_acc": 0.7866666666666666,
+      "attacked_fo": 0.8,
+      "baseline_fo_matched": 0.8,
+      "baseline_thr": 0.5,
+      "verdict": "tie"
+    },
+    {
+      "defense": "D3 ensemble of 3",
+      "calls": 3,
+      "clean_fc": 0.013333333333333334,
+      "clean_acc": 0.7866666666666666,
+      "attacked_fo": 0.8,
+      "baseline_fo_matched": 0.8,
+      "baseline_thr": 0.5,
+      "verdict": "tie"
+    },
+    {
+      "defense": "D4+D6 disagree,failclosed",
+      "calls": 2,
+      "clean_fc": 0.013333333333333334,
+      "clean_acc": 0.7866666666666666,
+      "attacked_fo": 0.8,
+      "baseline_fo_matched": 0.8,
+      "baseline_thr": 0.5,
+      "verdict": "tie"
+    },
+    {
+      "defense": "D5 field-structured",
+      "calls": 1,
+      "clean_fc": 0.0,
+      "clean_acc": 0.89,
+      "attacked_fo": 0.22,
+      "baseline_fo_matched": 0.8,
+      "baseline_thr": 0.5,
+      "verdict": "better"
+    }
+  ]
+}

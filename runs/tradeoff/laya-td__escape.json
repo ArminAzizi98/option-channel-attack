@@ -1,0 +1,106 @@
+{
+  "curve": [
+    {
+      "thr": 0.5,
+      "clean_fc": 0.0,
+      "clean_acc": 0.5166666666666667,
+      "attacked_fo": 0.98
+    },
+    {
+      "thr": 0.4,
+      "clean_fc": 0.0,
+      "clean_acc": 0.8766666666666667,
+      "attacked_fo": 0.82
+    },
+    {
+      "thr": 0.3,
+      "clean_fc": 0.06,
+      "clean_acc": 0.97,
+      "attacked_fo": 0.18666666666666668
+    },
+    {
+      "thr": 0.25,
+      "clean_fc": 0.62,
+      "clean_acc": 0.69,
+      "attacked_fo": 0.006666666666666667
+    },
+    {
+      "thr": 0.2,
+      "clean_fc": 1.0,
+      "clean_acc": 0.5,
+      "attacked_fo": 0.0
+    },
+    {
+      "thr": 0.15,
+      "clean_fc": 1.0,
+      "clean_acc": 0.5,
+      "attacked_fo": 0.0
+    },
+    {
+      "thr": 0.1,
+      "clean_fc": 1.0,
+      "clean_acc": 0.5,
+      "attacked_fo": 0.0
+    },
+    {
+      "thr": 0.05,
+      "clean_fc": 1.0,
+      "clean_acc": 0.5,
+      "attacked_fo": 0.0
+    },
+    {
+      "thr": 0.02,
+      "clean_fc": 1.0,
+      "clean_acc": 0.5,
+      "attacked_fo": 0.0
+    },
+    {
+      "thr": 0.01,
+      "clean_fc": 1.0,
+      "clean_acc": 0.5,
+      "attacked_fo": 0.0
+    }
+  ],
+  "defenses": [
+    {
+      "defense": "D1 canonical labels",
+      "calls": 1,
+      "clean_fc": 0.0,
+      "clean_acc": 0.8266666666666667,
+      "attacked_fo": 0.48,
+      "baseline_fo_matched": 0.98,
+      "baseline_thr": 0.5,
+      "verdict": "better"
+    },
+    {
+      "defense": "D3 ensemble of 3",
+      "calls": 3,
+      "clean_fc": 0.0,
+      "clean_acc": 0.84,
+      "attacked_fo": 0.5533333333333333,
+      "baseline_fo_matched": 0.98,
+      "baseline_thr": 0.5,
+      "verdict": "better"
+    },
+    {
+      "defense": "D4+D6 disagree,failclosed",
+      "calls": 2,
+      "clean_fc": 0.0,
+      "clean_acc": 0.82,
+      "attacked_fo": 0.46,
+      "baseline_fo_matched": 0.98,
+      "baseline_thr": 0.5,
+      "verdict": "better"
+    },
+    {
+      "defense": "D5 field-structured",
+      "calls": 1,
+      "clean_fc": 0.0,
+      "clean_acc": 1.0,
+      "attacked_fo": 0.0,
+      "baseline_fo_matched": 0.98,
+      "baseline_thr": 0.5,
+      "verdict": "better"
+    }
+  ]
+}

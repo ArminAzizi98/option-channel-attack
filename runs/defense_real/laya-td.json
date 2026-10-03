@@ -1,0 +1,122 @@
+[
+  {
+    "task": "injection",
+    "model": "laya-td",
+    "defense": "undefended",
+    "calls": 1,
+    "clean_acc": 0.6059113300492611,
+    "clean_fc": 0.019704433497536946,
+    "clean_fo": 0.7684729064039408,
+    "attacked_fo": 0.9310344827586207
+  },
+  {
+    "task": "injection",
+    "model": "laya-td",
+    "defense": "D1 canonical labels",
+    "calls": 1,
+    "clean_acc": 0.7487684729064039,
+    "clean_fc": 0.054187192118226604,
+    "clean_fo": 0.4482758620689655,
+    "attacked_fo": 0.6798029556650246
+  },
+  {
+    "task": "injection",
+    "model": "laya-td",
+    "defense": "D3 ensemble of 3",
+    "calls": 3,
+    "clean_acc": 0.7610837438423645,
+    "clean_fc": 0.04926108374384237,
+    "clean_fo": 0.42857142857142855,
+    "attacked_fo": 0.6945812807881774
+  },
+  {
+    "task": "injection",
+    "model": "laya-td",
+    "defense": "D4+D6 disagree,failclosed",
+    "calls": 2,
+    "clean_acc": 0.7512315270935961,
+    "clean_fc": 0.06403940886699508,
+    "clean_fo": 0.43349753694581283,
+    "attacked_fo": 0.6798029556650246
+  },
+  {
+    "task": "jailbreak",
+    "model": "laya-td",
+    "defense": "undefended",
+    "calls": 1,
+    "clean_acc": 0.6798839458413927,
+    "clean_fc": 0.03288201160541586,
+    "clean_fo": 0.6073500967117988,
+    "attacked_fo": 0.632495164410058
+  },
+  {
+    "task": "jailbreak",
+    "model": "laya-td",
+    "defense": "D1 canonical labels",
+    "calls": 1,
+    "clean_acc": 0.8597678916827853,
+    "clean_fc": 0.2688588007736944,
+    "clean_fo": 0.01160541586073501,
+    "attacked_fo": 0.03481624758220503
+  },
+  {
+    "task": "jailbreak",
+    "model": "laya-td",
+    "defense": "D3 ensemble of 3",
+    "calls": 3,
+    "clean_acc": 0.8597678916827853,
+    "clean_fc": 0.2688588007736944,
+    "clean_fo": 0.01160541586073501,
+    "attacked_fo": 0.03868471953578337
+  },
+  {
+    "task": "jailbreak",
+    "model": "laya-td",
+    "defense": "D4+D6 disagree,failclosed",
+    "calls": 2,
+    "clean_acc": 0.8491295938104448,
+    "clean_fc": 0.2901353965183752,
+    "clean_fo": 0.01160541586073501,
+    "attacked_fo": 0.03481624758220503
+  },
+  {
+    "task": "toxic",
+    "model": "laya-td",
+    "defense": "undefended",
+    "calls": 1,
+    "clean_acc": 0.5924479166666666,
+    "clean_fc": 0.044270833333333336,
+    "clean_fo": 0.7708333333333334,
+    "attacked_fo": 0.9739583333333334
+  },
+  {
+    "task": "toxic",
+    "model": "laya-td",
+    "defense": "D1 canonical labels",
+    "calls": 1,
+    "clean_acc": 0.6796875,
+    "clean_fc": 0.0234375,
+    "clean_fo": 0.6171875,
+    "attacked_fo": 0.8463541666666666
+  },
+  {
+    "task": "toxic",
+    "model": "laya-td",
+    "defense": "D3 ensemble of 3",
+    "calls": 3,
+    "clean_acc": 0.65625,
+    "clean_fc": 0.020833333333333332,
+    "clean_fo": 0.6666666666666666,
+    "attacked_fo": 0.8567708333333334
+  },
+  {
+    "task": "toxic",
+    "model": "laya-td",
+    "defense": "D4+D6 disagree,failclosed",
+    "calls": 2,
+    "clean_acc": 0.68359375,
+    "clean_fc": 0.052083333333333336,
+    "clean_fo": 0.5807291666666666,
+    "attacked_fo": 0.8463541666666666
+  }
+]

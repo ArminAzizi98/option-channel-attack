@@ -1,0 +1,122 @@
+[
+  {
+    "task": "injection",
+    "model": "von",
+    "defense": "undefended",
+    "calls": 1,
+    "clean_acc": 0.6182266009852216,
+    "clean_fc": 0.43349753694581283,
+    "clean_fo": 0.33004926108374383,
+    "attacked_fo": 0.8522167487684729
+  },
+  {
+    "task": "injection",
+    "model": "von",
+    "defense": "D1 canonical labels",
+    "calls": 1,
+    "clean_acc": 0.6182266009852216,
+    "clean_fc": 0.43349753694581283,
+    "clean_fo": 0.33004926108374383,
+    "attacked_fo": 0.8522167487684729
+  },
+  {
+    "task": "injection",
+    "model": "von",
+    "defense": "D3 ensemble of 3",
+    "calls": 3,
+    "clean_acc": 0.6182266009852216,
+    "clean_fc": 0.43349753694581283,
+    "clean_fo": 0.33004926108374383,
+    "attacked_fo": 0.8522167487684729
+  },
+  {
+    "task": "injection",
+    "model": "von",
+    "defense": "D4+D6 disagree,failclosed",
+    "calls": 2,
+    "clean_acc": 0.6182266009852216,
+    "clean_fc": 0.43349753694581283,
+    "clean_fo": 0.33004926108374383,
+    "attacked_fo": 0.8522167487684729
+  },
+  {
+    "task": "jailbreak",
+    "model": "von",
+    "defense": "undefended",
+    "calls": 1,
+    "clean_acc": 0.5880077369439072,
+    "clean_fc": 0.6150870406189555,
+    "clean_fo": 0.20889748549323017,
+    "attacked_fo": 0.27079303675048355
+  },
+  {
+    "task": "jailbreak",
+    "model": "von",
+    "defense": "D1 canonical labels",
+    "calls": 1,
+    "clean_acc": 0.5880077369439072,
+    "clean_fc": 0.6150870406189555,
+    "clean_fo": 0.20889748549323017,
+    "attacked_fo": 0.27079303675048355
+  },
+  {
+    "task": "jailbreak",
+    "model": "von",
+    "defense": "D3 ensemble of 3",
+    "calls": 3,
+    "clean_acc": 0.5880077369439072,
+    "clean_fc": 0.6150870406189555,
+    "clean_fo": 0.20889748549323017,
+    "attacked_fo": 0.27079303675048355
+  },
+  {
+    "task": "jailbreak",
+    "model": "von",
+    "defense": "D4+D6 disagree,failclosed",
+    "calls": 2,
+    "clean_acc": 0.5880077369439072,
+    "clean_fc": 0.6150870406189555,
+    "clean_fo": 0.20889748549323017,
+    "attacked_fo": 0.27079303675048355
+  },
+  {
+    "task": "toxic",
+    "model": "von",
+    "defense": "undefended",
+    "calls": 1,
+    "clean_acc": 0.6549479166666666,
+    "clean_fc": 0.036458333333333336,
+    "clean_fo": 0.6536458333333334,
+    "attacked_fo": 0.8333333333333334
+  },
+  {
+    "task": "toxic",
+    "model": "von",
+    "defense": "D1 canonical labels",
+    "calls": 1,
+    "clean_acc": 0.6549479166666666,
+    "clean_fc": 0.036458333333333336,
+    "clean_fo": 0.6536458333333334,
+    "attacked_fo": 0.8333333333333334
+  },
+  {
+    "task": "toxic",
+    "model": "von",
+    "defense": "D3 ensemble of 3",
+    "calls": 3,
+    "clean_acc": 0.6549479166666666,
+    "clean_fc": 0.036458333333333336,
+    "clean_fo": 0.6536458333333334,
+    "attacked_fo": 0.8333333333333334
+  },
+  {
+    "task": "toxic",
+    "model": "von",
+    "defense": "D4+D6 disagree,failclosed",
+    "calls": 2,
+    "clean_acc": 0.6549479166666666,
+    "clean_fc": 0.036458333333333336,
+    "clean_fo": 0.6536458333333334,
+    "attacked_fo": 0.8333333333333334
+  }
+]

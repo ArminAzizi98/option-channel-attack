@@ -1,0 +1,12 @@
+# Core. Install torch for your own CUDA build first.
+torch>=2.4
+transformers>=4.48
+datasets>=3.0
+numpy>=1.26
+matplotlib>=3.8
+
+# Typed decision model implementations evaluated in the paper.
+# Each may pull nvidia-cudnn-cu13; see the README if ModernBERT attention fails.
+laya
+von
+rlcd
