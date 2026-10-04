@@ -1,10 +1,10 @@
 """E2: attack a working gate and measure success in the unsafe direction only."""
 import os, sys, json, time, argparse
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from guardlab.config import ROOT
 os.environ.setdefault("HF_HOME", f"{ROOT}/hf")
 import numpy as np
 from guardlab import guardbench as G, models as Mo, metrics as Me, attacks as A
-from guardlab.config import ROOT
 
 
 def build_q(policy_id, block_label, allow_label, phrasing="positive"):

@@ -1,6 +1,6 @@
 #!/bin/bash
 cd "$(dirname "$0")/.."          # repository root
-export HF_HOME=${HF_HOME:-$PWD/hf}
+export HF_HOME=hf
 export HF_DATASETS_CACHE=data
 export CUDA_VISIBLE_DEVICES=${CUDA_VISIBLE_DEVICES:-0}
 export PYTHONHASHSEED=0

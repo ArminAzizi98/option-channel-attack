@@ -7,10 +7,10 @@ has a lower fail-open rate under attack.
 """
 import os, sys, json, argparse
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from guardlab.config import ROOT
 os.environ.setdefault("HF_HOME", f"{ROOT}/hf")
 import numpy as np
 from guardlab import guardbench as G, models as Mo, attacks as A, defenses as D
-from guardlab.config import ROOT
 
 
 def rates_at(probs, gold, thr):

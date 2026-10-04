@@ -1,11 +1,11 @@
 """E6: value normalisation as a defense, and the deterministic rule it implies."""
 import os, sys, json, argparse
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from guardlab.config import ROOT
 os.environ.setdefault("HF_HOME", f"{ROOT}/hf")
 import numpy as np
 from guardlab import guardbench as G, models as Mo, defenses as D, adaptive as Ad
 from guardlab import normalize as N
-from guardlab.config import ROOT
 
 
 class V:

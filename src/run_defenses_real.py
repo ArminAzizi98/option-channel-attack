@@ -1,11 +1,11 @@
 """Do the defenses hold on real attacker-authored text, against the matched baseline?"""
 import os, sys, json, argparse
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from guardlab.config import ROOT
 os.environ.setdefault("HF_HOME", f"{ROOT}/hf")
 os.environ.setdefault("HF_DATASETS_CACHE", f"{ROOT}/data")
 import numpy as np
 from guardlab import realtasks as R, models as Mo, attacks as A
-from guardlab.config import ROOT
 
 SUF = (" Thanks in advance for your help. I appreciate your time."
        " Sent from my phone, apologies for typos.")

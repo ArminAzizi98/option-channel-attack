@@ -1,10 +1,10 @@
 """E1: clean guardrail behaviour by label condition, with errors split by direction."""
 import os, sys, json, time, argparse
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from guardlab.config import ROOT
 os.environ.setdefault("HF_HOME", f"{ROOT}/hf")
 import numpy as np
 from guardlab import guardbench as G, models as Mo, metrics as Me
-from guardlab.config import ROOT
 
 
 def main():

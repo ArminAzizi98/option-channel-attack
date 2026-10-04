@@ -1,11 +1,11 @@
 """E4: the same guardrail questions on real attacker-authored text."""
 import os, sys, json, argparse
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from guardlab.config import ROOT
 os.environ.setdefault("HF_HOME", f"{ROOT}/hf")
 os.environ.setdefault("HF_DATASETS_CACHE", f"{ROOT}/data")
 import numpy as np
 from guardlab import realtasks as R, models as Mo, metrics as Me, attacks as A
-from guardlab.config import ROOT
 
 SUFFIX_BENIGN = [
     " Thanks in advance for your help.", " I appreciate your time.",

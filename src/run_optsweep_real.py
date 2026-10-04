@@ -6,11 +6,11 @@ only the name of the permissive option changes.
 """
 import argparse, json, os, sys, time
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from guardlab.config import ROOT
 os.environ.setdefault("HF_HOME", f"{ROOT}/hf")
 import numpy as np
 from guardlab import realtasks as R, models as Mo
 from run_optsweep import vocabulary, HONEST
-from guardlab.config import ROOT
 
 
 def main():

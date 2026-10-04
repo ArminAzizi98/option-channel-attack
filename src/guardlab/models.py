@@ -4,12 +4,12 @@ Deliberately independent of the other project's code so neither can break the ot
 Every wrapper returns probabilities in class order [ALLOW, BLOCK] plus whatever
 uncertainty signal the model exposes.
 """
+from .config import ROOT
 from typing import List, Dict, Any, Optional
 import os, warnings
 warnings.filterwarnings("ignore")
 os.environ.setdefault("HF_HOME", f"{ROOT}/hf")
 import numpy as np
-from .config import ROOT
 
 
 class LayaGate:

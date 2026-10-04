@@ -8,10 +8,10 @@ If a model is at chance on `minimal`, the task statement is the problem, not the
 """
 import os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from guardlab.config import ROOT
 os.environ.setdefault("HF_HOME", f"{ROOT}/hf")
 import numpy as np, random
 from guardlab import guardbench as G, models as Mo, metrics as Me
-from guardlab.config import ROOT
 
 REL = {
     "exfil":   lambda a, d, p: f"  destination: {d}",

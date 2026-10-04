@@ -1,10 +1,10 @@
 """How the policy is worded decides whether the gate fails open."""
 import os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from guardlab.config import ROOT
 os.environ.setdefault("HF_HOME", f"{ROOT}/hf")
 import numpy as np
 from guardlab import guardbench as G, models as Mo, metrics as Me
-from guardlab.config import ROOT
 
 model = Mo.load(sys.argv[1] if len(sys.argv) > 1 else "laya-td")
 print(f"{'policy':16s} {'phrasing':10s} {'acc':>7s} {'fail_open':>10s} {'fail_closed':>12s} {'block_rate':>11s}")

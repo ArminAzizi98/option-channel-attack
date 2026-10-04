@@ -10,10 +10,10 @@ correct and bound to the same classes, so the correct decision never changes.
 """
 import argparse, json, os, sys, time
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from guardlab.config import ROOT
 os.environ.setdefault("HF_HOME", f"{ROOT}/hf")
 import numpy as np
 from guardlab import guardbench as G, models as Mo
-from guardlab.config import ROOT
 
 STRATA = {
  "security_action": """escalate quarantine isolate contain remediate audit flag alert review
@@ -52,9 +52,9 @@ def vocabulary():
     return uniq
 
 
-def build_q(policy_id, allow_label, phrasing="positive"):
+def build_q(policy_id, allow_label, phrasing="positive", instructions=None):
     _, block_def, allow_def, _, _ = next(p for p in G.PHRASINGS[phrasing] if p[0] == policy_id)
-    return ({"type": "choice", "instructions": G.INSTRUCTIONS,
+    return ({"type": "choice", "instructions": instructions or G.INSTRUCTIONS,
              "criteria": {allow_label: allow_def, "block": block_def}},
             [allow_label, "block"])
 
@@ -66,6 +66,7 @@ def main():
                     default="exfil,secret,escape,exfil_secret,unauth_irrev,escape_or_exfil")
     ap.add_argument("--n", type=int, default=200)
     ap.add_argument("--labels", default="", help="comma list; empty means the full vocabulary")
+    ap.add_argument("--instruction", default="", help="name from run_instruction.VARIANTS")
     ap.add_argument("--out", default=f"{ROOT}/runs/optsweep")
     a = ap.parse_args()
     os.makedirs(a.out, exist_ok=True)
@@ -75,6 +76,10 @@ def main():
         keep = set(a.labels.split(",")) | {HONEST}
         vocab = [(w, s) for w, s in vocab if w in keep]
     strat = dict(vocab)
+    instr = None
+    if a.instruction:
+        from run_instruction import VARIANTS
+        instr = VARIANTS[a.instruction]
     model = Mo.load(a.model)
     rows, t0 = [], time.time()
 
@@ -84,7 +89,7 @@ def main():
         states = [it.state for it in items]
         blocked = gold == 1
         for k, (lab, stratum) in enumerate(vocab):
-            qspec, cn = build_q(pid, lab)
+            qspec, cn = build_q(pid, lab, instructions=instr)
             p = model.score(states, qspec, cn, batch_size=64)["probs"]
             pred = p.argmax(1)
             rows.append({"model": a.model, "policy": pid, "allow_label": lab,
@@ -103,7 +108,7 @@ def main():
     f = os.path.join(a.out, f"{a.model}.json")
     with open(f, "w") as fh:
         json.dump({"model": a.model, "n": a.n, "n_labels": len(vocab),
-                   "strata": strat, "rows": rows}, fh)
+                   "instruction": a.instruction, "strata": strat, "rows": rows}, fh)
     print(f"wrote {f}  ({len(rows)} cells, {time.time()-t0:.0f}s)", flush=True)
     print("OPTSWEEP_DONE", flush=True)
 

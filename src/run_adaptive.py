@@ -1,11 +1,11 @@
 """E5: adaptive attacks. Does each defense survive an attacker who knows about it?"""
 import os, sys, json, argparse
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from guardlab.config import ROOT
 os.environ.setdefault("HF_HOME", f"{ROOT}/hf")
 import numpy as np
 from guardlab import guardbench as G, models as Mo, metrics as Me, attacks as A
 from guardlab import defenses as D, adaptive as Ad
-from guardlab.config import ROOT
 
 
 def asr_open(clean, adv, gold):
