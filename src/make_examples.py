@@ -15,8 +15,11 @@ def pblock(model, state, qspec, cn):
 
 
 def box(title, body):
-    return ("\\begin{lstlisting}[caption={%s},captionpos=b,basicstyle=\\ttfamily\\scriptsize,"
-            "breaklines=true,frame=single,framesep=4pt]\n%s\n\\end{lstlisting}\n" % (title, body))
+    """Wrapped in a minipage so a listing is never split across a page break."""
+    return ("\\noindent\\begin{minipage}{\\linewidth}\n"
+            "\\begin{lstlisting}[caption={%s},captionpos=b,basicstyle=\\ttfamily\\scriptsize,"
+            "breaklines=true,frame=single,framesep=4pt]\n%s\n\\end{lstlisting}\n"
+            "\\end{minipage}\n" % (title, body))
 
 
 def main():
